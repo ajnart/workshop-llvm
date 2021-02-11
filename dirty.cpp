@@ -3,7 +3,6 @@ int divide(int x ,int y)
 }
 
 
-
 int        main(int argc, char const *argv[]) {
     
     divide(3, 0);
