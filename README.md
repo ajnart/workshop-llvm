@@ -39,6 +39,10 @@ On vérifie ça grâce à: ``clang-tidy --version``
 ### Installation de Bear
 Nous allons également installer [B-ear](https://github.com/rizsotto/Bear) afin de générer une base de donnée de compiliation de nos projets. Bear créera un ``compile_commands.json`` qui permettera à clangd de mieux linter votre code.
 
+
+### Recommendations
+L'extension clangd recommande de désinstaller l'extension C/C++ pour ne pas avoir de duplications de recommendations
+
 ## Mise en place de sa propre norme grâce à Clang-Format
 ### Configuration de la norme
 Dans cette étape, nous allons générer un fichier .clang-format qui vas être utilisé pour dire à ``clang-format`` quelle norme utiliser pour linter vos fichiers.
