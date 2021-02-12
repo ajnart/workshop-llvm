@@ -4,7 +4,7 @@
 
 **N'hésitez pas à star ⭐ le repo si vous avez aimé ce workshop!**
 
-![](https://img.shields.io/github/stars/ajnart/workshop-llvm?label=%E2%AD%90&style=for-the-badge)
+![](https://img.shields.io/github/stars/ajnart/workshop-llvm?label=%E2%AD%90&style=for-the-badge?branch=master&kill_cache=1")
 
 Déroulement du workshop:
  - Installation des outils nécessaires
