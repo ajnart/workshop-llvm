@@ -26,7 +26,7 @@ cd workshop
 
 *Vous pouvez vérifier l'installation à l'aide de ``clangd --version``*
 
- Ainsi que l'extesion vscode [clangd](https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd)
+ Ainsi que l'extension vscode [clangd](https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd)
  à l'aide de la commande *(ctrl+p)*:
  
  ``ext install llvm-vs-code-extensions vscode-clangd``
@@ -39,11 +39,11 @@ Clang-format devait également être installé.
 On vérifie ça grâce à: ``clang-tidy --version``
 
 ### Installation de Bear
-Nous allons également installer [B-ear](https://github.com/rizsotto/Bear) afin de générer une base de donnée de compiliation de nos projets. Bear créera un ``compile_commands.json`` qui permettera à clangd de mieux linter votre code.
+Nous allons également installer [B-ear](https://github.com/rizsotto/Bear) afin de générer une base de donnée de compilation de nos projets. Bear créera un ``compile_commands.json`` qui permettra à clangd de mieux linter votre code.
 
 
-### Recommendations
-L'extension clangd recommande de désinstaller l'extension C/C++ pour ne pas avoir de duplications de recommendations
+### Recommandations
+L'extension clangd recommande de désinstaller l'extension C/C++ pour ne pas avoir de duplications de recommandations
 
 ## Mise en place de sa propre norme grâce à Clang-Format
 ### Configuration de la norme
@@ -53,40 +53,40 @@ Pour ce faire, utilisez un [générateur en ligne](https://zed0.co.uk/clang-form
 
 Sauvegardez votre .clang-format dans le dossier de ce workshop.
 
-Clang-format va chercher le fichier .clang-format le plus proche du current working directory en remontant recursivement dans vos fichiers.
+Clang-format va chercher le fichier .clang-format le plus proche du current working directory en remontant récursivement dans vos fichiers.
 
 ### Installation de la norme
 
-Maintenant, faites en sorte que l'extension clangd soit le formatteur de code par défaut dans vscode:
+Maintenant, faites en sorte que l'extension clangd soit le formateur de code par défaut dans vscode:
 
 > *ctrl+p format document with...*
 
 > ![formatter](/assets/formatter.gif)
 
-on alors en éditant son fichier *settings.json*:
+ou alors en éditant son fichier *settings.json*:
 
 ```json
 "[cpp]": {
         "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
     },
 ```
-Vous devriez maintenant être en mesure de formatter votre code à l'aide de votre config .clang-format
+Vous devriez maintenant être en mesure de formater votre code à l'aide de votre config .clang-format
 
 ## Mise en place du language server Clangd
 
 ### Vérification du fonctionnement de clangd
 
 ⚠  **Il faut faire la commande `bear -- \build command\` pour créer la base de donnée de compilation pour clangd**.
-Dans notre example : ``bear -- make`` générera un fichier ``compile_commands.json`` qui sera ensuie utilisé pour linter vos fichiers.
+Dans notre exemple : ``bear -- make`` générera un fichier ``compile_commands.json`` qui sera ensuite utilisé pour linter vos fichiers.
 
 En mettant votre curseur sur la fonction divide, clangd devrait vous montrer le prototype de la fonction
 > ![clang](assets/clang.png)
 
 ## Clang-tidy
 ### Mise en place de clang-tidy
-Nous allons maintenant configurer clang-tidy pour avoir des recommendations sur notre code.
+Nous allons maintenant configurer clang-tidy pour avoir des recommandations sur notre code.
 
-Créer un fichier ``.clang-tidy``
+Créer un fichier ``.clang-tidy`` contenant:
 
 ```yaml
 Checks: "
@@ -95,9 +95,9 @@ Checks: "
 "
 ```
 
-Cette configuration active tout les checks par défaut, il faut ensutie désactiver manuellement certains checks à la main en rajoutant une ligne sous la forme:  ``-\glob\,``
+Cette configuration active tout les checks par défaut, il faut ensuite désactiver manuellement certains checks à la main en rajoutant une ligne sous la forme:  ``-\glob\,``
 
-Pour voir tout les checks disponnibles, rendez vous [ici](https://clang.llvm.org/extra/clang-tidy/checks/list.html)
+Pour voir tout les checks disponibles, rendez vous [ici](https://clang.llvm.org/extra/clang-tidy/checks/list.html)
 
 ## Utilisation du language server et de clang-tidy
 
@@ -123,13 +123,17 @@ Tout d'abord, créer un fichier `CI.yml` pour créer une action il faut que cett
 
 Cette action va maintenant lancer un docker utilisant l'image docker epitech 
 
-*L'indentation de cette liste correspond à l'indentation que vour aurez dans votre fichier yml* 😉
+*L'indentation de cette liste correspond à l'indentation que vous aurez dans votre fichier yml* 😉
 
 - - - 
-J'espère que mon workshop vous a plu ❤ si vous voulez aller plus loin vous pouvez:
+J'espère que mon workshop vous a plu. Si vous voulez aller plus loin vous pouvez:
 - Mettre en place une action pour vérifier que son code est conforme à sa propre norme
 - Faire une action pour vérifier que les tests passent
 - Utiliser --html sur gcovr pour créer un fichier .html indiquant le coverage 
 - Uploader le .html généré par gcovr dans une [github pages](https://pages.github.com/)
  - Utiliser un [analyseur de code sémantique](https://www.deepcode.ai/) 
  - Transformer le résultat de ses [tests gtest en HTML](https://gitlab.uni-koblenz.de/agrt/gtest2html)
+
+
+
+ *Made with ❤ by [Thomas "Ajnart" Camlong](https://github.com/ajnart)*

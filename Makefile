@@ -1,5 +1,6 @@
 all:
-	g++ dirty.cpp
+	$(CXX) dirty.cpp
 
 clean:
 	rm *.o
+	a.out
