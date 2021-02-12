@@ -4,6 +4,8 @@
 
 **N'hésitez pas à star ⭐ le repo si vous avez aimé ce workshop!**
 
+![](https://img.shields.io/github/stars/ajnart/workshop-llvm?label=%E2%AD%90&style=for-the-badge)
+
 Déroulement du workshop:
  - Installation des outils nécessaires
  - Mise en place de sa propre norme à l'aide de clang-format
@@ -97,7 +99,7 @@ Cette configuration active tout les checks par défaut, il faut ensutie désacti
 
 Pour voir tout les checks disponnibles, rendez vous [ici](https://clang.llvm.org/extra/clang-tidy/checks/list.html)
 
-### Fix des erreurs de base grâce à l'extension clangd
+## Utilisation du language server et de clang-tidy
 
 Comme vous pouvez le voir sur le gif ci-dessous, grâce à clangd il est très facile de régler les erreurs basiques dans votre code :
 
@@ -107,3 +109,27 @@ En fonction de votre configuration clang-tidyn vous aurez des recommendations af
 
 > ![code](assets/tidy-fix.png)
 
+
+## Mise en place d'un CI pour vérifier que son code compile
+Nous allons maintenant s'intéresser au dossier ``.github`` pour rajouter des workflows grâce aux [github actions](https://github.com/features/actions)
+
+Tout d'abord, créer un fichier `CI.yml` pour créer une action il faut que cette action:
+
+- S'active quand il y a des pushs sur master
+- Contienne un job build qui:
+    - Utilise le [docker epitech](https://github.com/Epitech/epitest-docker)
+    - Contient une step qui:
+        -  Réalise votre commande de build
+
+Cette action va maintenant lancer un docker utilisant l'image docker epitech 
+
+*L'indentation de cette liste correspond à l'indentation que vour aurez dans votre fichier yml* 😉
+
+- - - 
+J'espère que mon workshop vous a plu ❤ si vous voulez aller plus loin vous pouvez:
+- Mettre en place une action pour vérifier que son code est conforme à sa propre norme
+- Faire une action pour vérifier que les tests passent
+- Utiliser --html sur gcovr pour créer un fichier .html indiquant le coverage 
+- Uploader le .html généré par gcovr dans une [github pages](https://pages.github.com/)
+ - Utiliser un [analyseur de code sémantique](https://www.deepcode.ai/) 
+ - Transformer le résultat de ses [tests gtest en HTML](https://gitlab.uni-koblenz.de/agrt/gtest2html)
