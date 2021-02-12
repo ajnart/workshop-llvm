@@ -38,9 +38,25 @@ On vérifie ça grâce à: ``clang-tidy --version``
 Nous allons également installer [bear](https://github.com/rizsotto/Bear) afin de générer une base de donnée de compiliation de nos projets. Bear créera un ``compile_commands.json`` qui permettera à clangd de mieux linter votre code.
 
 ## Mise en place de sa propre norme grâce à Clang-Format
-### Configuration de notre norme
-Dans cette étape, nous allons générer un fichier .clang-format qui vas être utilisé pour dire à ``clang-format`` quelle forme utiliser pour linter nos fichiers.
+### Configuration de la norme
+Dans cette étape, nous allons générer un fichier .clang-format qui vas être utilisé pour dire à ``clang-format`` quelle norme utiliser pour linter vos fichiers.
 
-Pour ce faire on va utiliser un [générateur en ligne](https://zed0.co.uk/clang-format-configurator/)
+Pour ce faire, utilisez un [générateur en ligne](https://zed0.co.uk/clang-format-configurator/)
 
 Sauvegardez votre .clang-format dans le dossier de ce workshop.
+
+Clang-format va chercher le fichier .clang-format le plus proche du current working directory en remontant recursivement dans vos fichiers.
+
+Maintenant, faites en sorte que l'extension clangd soit le formatteur de code par défaut dans vscode:
+
+> *ctrl+p format document with...*
+
+![formatter](/assets/formatter.gif)
+
+on alors en éditant son fichier *settings.json*:
+
+```json
+"[cpp]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+    },
+```
