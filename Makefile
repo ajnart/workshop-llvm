@@ -2,5 +2,5 @@ all:
 	$(CXX) dirty.cpp
 
 clean:
-	rm *.o
-	a.out
+	rm dirty.o
+        rm a.out
