@@ -47,9 +47,9 @@ L'extension clangd recommande de désinstaller l'extension C/C++ pour ne pas avo
 
 ## Mise en place de sa propre norme grâce à Clang-Format
 ### Configuration de la norme
-Dans cette étape, nous allons générer un fichier .clang-format qui vas être utilisé pour dire à ``clang-format`` quelle norme utiliser pour linter vos fichiers.
+Dans cette étape, nous allons générer un fichier .clang-format qui va être utilisé pour dire à ``clang-format`` quelle norme utiliser pour linter vos fichiers.
 
-Pour ce faire, utilisez un [générateur en ligne](https://zed0.co.uk/clang-format-configurator/)
+Pour se faire, utilisez un [générateur en ligne](https://zed0.co.uk/clang-format-configurator/)
 
 Sauvegardez votre .clang-format dans le dossier de ce workshop.
 
