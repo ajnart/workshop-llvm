@@ -1,6 +1,6 @@
 # Workshop clang tools
 
-*Ce workshop traite sur l'intégration des outils clang dans vscode. Il peut quand même vous aider à vous familiariser avec les outils qu'offrent la suite clang si vous utilisez un IDE inférieur.*
+*Ce workshop traite sur l'intégration des outils clang dans vscode. Il peut quand même vous aider à vous familiariser avec les outils qu'offrent la suite clang si vous utilisez un IDE différent.*
 
 **N'hésitez pas à star ⭐ le repo si vous avez aimé ce workshop!**
 
