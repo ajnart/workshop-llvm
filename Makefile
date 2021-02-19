@@ -3,4 +3,4 @@ all:
 
 clean:
 	rm dirty.o
-        rm a.out
+	rm a.out
