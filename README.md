@@ -1,6 +1,6 @@
 # Workshop clang tools
 
-*Ce workshop traite sur l'intégration des outils clang dans vscode. Il peut aussi vous aider à vous familiariser avec les outils qu'offrent la suite clang si vous utilisez des IDE's inférieurs.*
+*Ce workshop traite sur l'intégration des outils clang dans vscode. Il peut quand même vous aider à vous familiariser avec les outils qu'offrent la suite clang si vous utilisez un IDE inférieur.*
 
 **N'hésitez pas à star ⭐ le repo si vous avez aimé ce workshop!**
 
@@ -26,7 +26,7 @@ cd workshop
 
 *Vous pouvez vérifier l'installation à l'aide de ``clangd --version``*
 
- Ainsi que l'extension vscode [clangd](https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd)
+ Ainsi que l'extension vscode [clangd](https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd) ou de [l'extension pour votre IDE](https://clangd.llvm.org/installation.html)
  à l'aide de la commande *(ctrl+p)*:
  
  ``ext install llvm-vs-code-extensions vscode-clangd``
